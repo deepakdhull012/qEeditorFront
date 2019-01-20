@@ -23,7 +23,7 @@ export class SharedService {
   }
 
   checkLogin() {
-    if (localStorage.getItem('user').length>0  && localStorage.getItem('user') != 'null') {
+    if (localStorage.getItem('user') != null  && localStorage.getItem('user') != 'null' && localStorage.getItem('user') != undefined ) {
       return true;
     }
     return false;

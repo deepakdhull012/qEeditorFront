@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/qeditor",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
