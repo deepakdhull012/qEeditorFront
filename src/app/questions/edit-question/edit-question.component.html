@@ -1,0 +1,84 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class='back' [routerLink]="['..','list']">Back</h3>
+                <h2>Edit Question</h2>
+                
+                <form [formGroup]="editQuestionForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>Question Content</label>
+                        <textarea  formControlName="question" class="form-control question-content"></textarea>
+                        <div class="error" *ngIf="!editQuestionForm.get('question').valid && (editQuestionForm.get('question').dirty || editQuestionForm.get('question').touched)">Question
+                            Content is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Option A</label>
+                        <input type="text" formControlName="optionA" class="form-control" />
+                        <div class="error" *ngIf="!editQuestionForm.get('optionA').valid && (editQuestionForm.get('optionA').dirty || editQuestionForm.get('optionA').touched)">Option
+                            A is required</div>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Option B</label>
+                        <input type="text" formControlName="optionB" class="form-control" />
+                        <div class="error" *ngIf="!editQuestionForm.get('optionB').valid && (editQuestionForm.get('optionB').dirty || editQuestionForm.get('optionB').touched)">Option
+                            B is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Option C</label>
+                        <input type="text" formControlName="optionC" class="form-control" />
+                        <div class="error" *ngIf="!editQuestionForm.get('optionC').valid && (editQuestionForm.get('optionC').dirty || editQuestionForm.get('optionC').touched)">Option
+                            C is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Option D</label>
+                        <input type="text" formControlName="optionD" class="form-control" />
+                        <div class="error" *ngIf="!editQuestionForm.get('optionD').valid && (editQuestionForm.get('optionD').dirty || editQuestionForm.get('optionD').touched)">Option
+                            D is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Correct Answer</label>
+                        <input type="text" formControlName="answer" class="form-control" />
+                        <div class="error" *ngIf="!editQuestionForm.get('answer').valid && (editQuestionForm.get('answer').dirty || editQuestionForm.get('answer').touched)">Correct
+                            Answer Is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Level</label>
+                        <input type="text" formControlName="level" class="form-control" />
+                        <div class="error" *ngIf="!editQuestionForm.get('level').valid && (editQuestionForm.get('level').dirty || editQuestionForm.get('level').touched)">
+                            Level Is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Top Category</label>
+                        <input type="text" formControlName="topCategory" class="form-control" />
+                        <div class="error" *ngIf="!editQuestionForm.get('topCategory').valid && (editQuestionForm.get('topCategory').dirty || editQuestionForm.get('topCategory').touched)">
+                            Top Category Is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <input type="text" formControlName="category" class="form-control" />
+                        <div class="error" *ngIf="!editQuestionForm.get('category').valid && (editQuestionForm.get('category').dirty || editQuestionForm.get('category').touched)">
+                            Category Is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Sub Category</label>
+                        <input type="text" formControlName="subCategory" class="form-control"/>
+                        <div class="error" *ngIf="!editQuestionForm.get('subCategory').valid && (editQuestionForm.get('subCategory').dirty || editQuestionForm.get('subCategory').touched)">
+                            Sub Category Is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Sub Set Id</label>
+                        <input type="text" formControlName="subsetId" class="form-control"/>
+                        <div class="error" *ngIf="!editQuestionForm.get('subsetId').valid && (editQuestionForm.get('subsetId').dirty || editQuestionForm.get('subsetId').touched)">
+                            Sub Category Is required</div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Update Question</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

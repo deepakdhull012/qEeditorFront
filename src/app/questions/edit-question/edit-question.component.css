@@ -1,0 +1,11 @@
+.error {
+    color:red;
+}
+.question-content {
+    min-height: 150px;
+}
+.back {
+    cursor: pointer;
+    color: teal;
+    text-decoration: underline;
+}

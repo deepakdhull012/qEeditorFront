@@ -1,0 +1,82 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Add New Question</h2>
+                <form [formGroup]="addQuestionForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>Question Content</label>
+                        <textarea formControlName="question" class="form-control"></textarea>
+                        <div class="error" *ngIf="!addQuestionForm.get('question').valid && (addQuestionForm.get('question').dirty || addQuestionForm.get('question').touched)">Question
+                            Content is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Option A</label>
+                        <input type="text" formControlName="optionA" class="form-control" />
+                        <div class="error" *ngIf="!addQuestionForm.get('optionA').valid && (addQuestionForm.get('optionA').dirty || addQuestionForm.get('optionA').touched)">Option
+                            A is required</div>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Option B</label>
+                        <input type="text" formControlName="optionB" class="form-control" />
+                        <div class="error" *ngIf="!addQuestionForm.get('optionB').valid && (addQuestionForm.get('optionB').dirty || addQuestionForm.get('optionB').touched)">Option
+                            B is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Option C</label>
+                        <input type="text" formControlName="optionC" class="form-control" />
+                        <div class="error" *ngIf="!addQuestionForm.get('optionC').valid && (addQuestionForm.get('optionC').dirty || addQuestionForm.get('optionC').touched)">Option
+                            C is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Option D</label>
+                        <input type="text" formControlName="optionD" class="form-control" />
+                        <div class="error" *ngIf="!addQuestionForm.get('optionD').valid && (addQuestionForm.get('optionD').dirty || addQuestionForm.get('optionD').touched)">Option
+                            D is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Correct Answer</label>
+                        <input type="text" formControlName="answer" class="form-control" />
+                        <div class="error" *ngIf="!addQuestionForm.get('answer').valid && (addQuestionForm.get('answer').dirty || addQuestionForm.get('answer').touched)">Correct
+                            Answer Is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Level</label>
+                        <input type="text" formControlName="level" class="form-control"/>
+                        <div class="error" *ngIf="!addQuestionForm.get('level').valid && (addQuestionForm.get('level').dirty || addQuestionForm.get('level').touched)">
+                            Level Is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Top Category</label>
+                        <input type="text" formControlName="topCategory" class="form-control" />
+                        <div class="error" *ngIf="!addQuestionForm.get('topCategory').valid && (addQuestionForm.get('topCategory').dirty || addQuestionForm.get('topCategory').touched)">
+                            Top Category Is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <input type="text" formControlName="category" class="form-control" />
+                        <div class="error" *ngIf="!addQuestionForm.get('category').valid && (addQuestionForm.get('category').dirty || addQuestionForm.get('category').touched)">
+                            Category Is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Sub Category</label>
+                        <input type="text" formControlName="subCategory" class="form-control" />
+                        <div class="error" *ngIf="!addQuestionForm.get('subCategory').valid && (addQuestionForm.get('subCategory').dirty || addQuestionForm.get('subCategory').touched)">
+                            Sub Category Is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Sub Set Id</label>
+                        <input type="text" formControlName="subsetId" class="form-control" />
+                        <div class="error" *ngIf="!addQuestionForm.get('subsetId').valid && (addQuestionForm.get('subsetId').dirty || addQuestionForm.get('subsetId').touched)">
+                            Sub Category Is required</div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Add Question</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

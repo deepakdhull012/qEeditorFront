@@ -1,0 +1,19 @@
+<h1>Question Section</h1>
+<nav class="navbar navbar-inverse">
+        <div class="container-fluid pull-left">
+          <ul class="nav navbar-nav">
+            <li *ngIf="listMode" class="active"><a (click)="listMode=false;" [routerLink]="['add']">Add New Question</a></li>
+            <li *ngIf="listMode"><a (click)="mailSent()" >Mark As Complete</a></li>
+            <li *ngIf="!listMode"><a (click)="listMode=true;" [routerLink]="['list']">Back To List</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3 col-md-3 pull-right">
+             <div class="input-group navbar-form">
+                <input type="text" [(ngModel)]="searchId" class="form-control" placeholder="Enter Your Id" name="srch-term" id="srch-term">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" (click)="setSearchId()"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div> 
+            </div>
+      </nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,24 @@
+<div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Register Here!</h3>
+            <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" formControlName="email" class="form-control"/>
+                    <div class="error" *ngIf="!signUpForm.get('email').valid && (signUpForm.get('email').dirty || signUpForm.get('email').touched)">Please enter valid E-mail ID:</div>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" formControlName="password" class="form-control" />
+                    <div class="error" *ngIf="!signUpForm.get('password').valid && (signUpForm.get('password').dirty || signUpForm.get('password').touched)">Please provide password at least 6 digit long</div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary">Sign Up</button>
+                </div>
+                </form>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="card col-md-12" *ngFor="let question of questions">
+        <button class="btn btn-primary card-header" [routerLink]="['..','edit']" (click)="edit(question)">Edit Question</button>
+        <h3><strong>Question: </strong>{{question.question}}</h3>
+        <p><strong>Option A: </strong>{{question.optionA}}</p>
+        <p><strong>Option B: </strong>{{question.optionB}}</p>
+        <p><strong>Option C: </strong>{{question.optionC}}</p>
+        <p><strong>Option D: </strong>{{question.optionD}}</p>
+        <p><strong>Correct Answer: </strong>{{question.answer}}</p>
+        <p><strong>Level: </strong>{{question.level}}</p>
+        <p><strong>Top Category: </strong>{{question.topCategory}}</p>
+        <p><strong>Category: </strong>{{question.category}}</p>
+        <p><strong>Sub Category: </strong>{{question.subCategory}}</p>
+        <p><strong>Sub Set Id: </strong>{{question.subsetId}}</p>
+        
+      </div>
+</div>
+
+
